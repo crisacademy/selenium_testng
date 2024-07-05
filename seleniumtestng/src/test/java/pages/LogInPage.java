@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeTest;
 
 public class LogInPage {
 
@@ -15,6 +14,7 @@ public class LogInPage {
 
     }
     public static String email_inputField_cssSelector = "input[name='email']";
+
     public static  String password_inputField_cssSelector = "input[name='password']";
     public  static  String signIn_button_cssSelector = "input[value='Sign In']";
 
