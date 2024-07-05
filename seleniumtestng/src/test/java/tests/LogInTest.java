@@ -1,8 +1,6 @@
 package tests;
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.LogInPage;
 
 import static pages.LogInPage.driver;
@@ -12,21 +10,20 @@ public class LogInTest {
     @BeforeTest
     void openBrowserPageTest() {
         LogInPage.Setup();
-    }
-
-    @Test
-    void validateSignInPageTextTest() {
-        LogInPage.VALIDATE_SIGN_IN_PAGE_TEXT();
+        LogInPage.VERIFY_SIGN_IN_PAGE_TEXT();
     }
 
     @Test
     void enterEmailPasswordTest() {
         LogInPage.ENTER_EMAIL();
         LogInPage.ENTER_PASSWORD();
+        LogInPage.CLICK_SIGN_IN_BUTTON();
+        LogInPage.VERIFY_DASHBOARD_ALL_PRODUCTS_PAGE_TEXT();
+        LogInPage.WAITING_DELAY();
     }
 
     @AfterTest
-    public void tearDownTest() {
+    public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
