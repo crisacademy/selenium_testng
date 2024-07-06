@@ -24,8 +24,8 @@ public class LogInPage {
 
         // Set Chrome options to run in headless mode
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
-        options.addArguments("--start-maximized");
+        options.addArguments("--headless");
+//        options.addArguments("--start-maximized");
         options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1920,1080");
 
